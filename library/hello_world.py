@@ -23,9 +23,7 @@ def hello_world():
         kwargs = {
             'string1': request.form['string1'],
             'string2': request.form['string2'],
-            'dict1':ta.wordcount(string1),
-            #'union': ta.union(request.form['string1'],request.form['string2']),
-            'submit_value': request.form['submit'],
-            }
+            'union': ta.union(request.form['string1'],request.form['string2']),
+                }
         return render_template(
             'forms/textanalytics_form_results.html', **kwargs)
